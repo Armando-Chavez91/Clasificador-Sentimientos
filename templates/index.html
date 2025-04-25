@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Clasificador de Tweets</title>
+</head>
+<body>
+  <h1>Analiza el Sentimiento de un Tweet</h1>
+  <form id="formulario">
+    <input type="text" id="tweet" placeholder="Escribe un tweet aquí" required>
+    <button type="submit">Clasificar</button>
+  </form>
+  <h2 id="resultado"></h2>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const texto = document.getElementById('tweet').value;
+      const res = await fetch('/clasificar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texto: texto })
+      });
+      const data = await res.json();
+      document.getElementById('resultado').innerText = 'Sentimiento: ' + data.sentimiento;
+    });
+  </script>
+</body>
+</html>
 
