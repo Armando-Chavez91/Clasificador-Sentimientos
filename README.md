@@ -4,13 +4,13 @@ Este proyecto implementa un sistema de clasificación de sentimientos basado en 
 Instalación
 Clona este repositorio o descarga los archivos del proyecto.
 
-Asegúrate de tener instalado Python 3.0 en tu máquina.
+Tener instalado Python 3.0.
 
-Instala las dependencias necesarias ejecutando:
+Instalar las dependencias necesarias ejecutando:
 
 pip install -r requirements.txt
 
-Ejecuta la aplicación localmente:
+Ejecutar la aplicación localmente:
 
 python app.py
 
